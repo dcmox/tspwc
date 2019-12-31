@@ -19,7 +19,7 @@ describe('tsptw test suite', () => {
                       to: 'Madison, WI',
                       valid: true,
                       arriveBy: 'Arrival @ 5/1, 6 AM meets criteria: between 5/1, 6 AM and 5/1, 7 AM',
-                      load: 'Unloaded (10) from Truck (100).',
+                      load: 'Sold (10) goods from Salesman (100).',
                       capacity: 90,
                     },
                     {
@@ -28,7 +28,7 @@ describe('tsptw test suite', () => {
                       to: 'Chicago, IL',
                       valid: true,
                       arriveBy: 'Arrival @ 5/1, 8 AM meets criteria: between 5/1, 8 AM and 5/1, 10 AM',
-                      load: 'Unloaded (10) from Truck (90).',
+                      load: 'Sold (10) goods from Salesman (90).',
                       capacity: 80,
                     },
                     {
@@ -37,7 +37,7 @@ describe('tsptw test suite', () => {
                       to: 'Grand Rapids, MI',
                       valid: true,
                       arriveBy: 'Arrival @ 5/1, 11 AM meets criteria: by 5/2, 6 AM',
-                      load: 'Loaded (20) to Truck (80).',
+                      load: 'Added (20) goods to Salesman (80).',
                       capacity: 60,
                     },
                     {
@@ -45,7 +45,7 @@ describe('tsptw test suite', () => {
                       hours: 8.5,
                       to: 'Minneapolis, MN',
                       valid: true,
-                      load: 'Unloaded (10) from Truck (100).',
+                      load: 'Sold (10) goods from Salesman (100).',
                       capacity: 90,
                     },
                     {
@@ -54,7 +54,7 @@ describe('tsptw test suite', () => {
                       to: 'Kansas City, MO',
                       valid: true,
                       arriveBy: 'Arrival @ 5/2, 2 AM meets criteria: by 5/3, 12 PM',
-                      load: 'Unloaded (10) from Truck (90).',
+                      load: 'Sold (10) goods from Salesman (90).',
                       capacity: 80,
                     },
                     {
@@ -63,7 +63,7 @@ describe('tsptw test suite', () => {
                       to: 'Indianapolis, Indiana',
                       valid: true,
                       arriveBy: 'Arrival @ 5/2, 9 AM meets criteria: by 5/2, 12 PM',
-                      load: 'Unloaded (10) from Truck (80).',
+                      load: 'Sold (10) goods from Salesman (80).',
                       capacity: 70,
                     },
                     {
@@ -71,7 +71,7 @@ describe('tsptw test suite', () => {
                       hours: 11,
                       to: 'New York, NY',
                       valid: true,
-                      load: 'Unloaded (10) from Truck (70).',
+                      load: 'Sold (10) goods from Salesman (70).',
                       capacity: 60,
                     },
                     {
@@ -79,7 +79,7 @@ describe('tsptw test suite', () => {
                       hours: 10.5,
                       to: 'Lexington, KY',
                       valid: true,
-                      load: 'Unloaded (10) from Truck (60).',
+                      load: 'Sold (10) goods from Salesman (60).',
                       capacity: 50,
                     },
                     {
@@ -87,7 +87,7 @@ describe('tsptw test suite', () => {
                       hours: 3,
                       to: 'Nashville, TN',
                       valid: true,
-                      load: 'Unloaded (10) from Truck (50).',
+                      load: 'Sold (10) goods from Salesman (50).',
                       capacity: 40,
                     },
                   ],

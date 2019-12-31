@@ -55,10 +55,10 @@ export const NodeResultMsg: INodeResultMsg = {
     arriveBetweenSuccess: 'Arrival @ {arrivalTime} meets criteria: between {deadline} and {deadline2}',
     arriveByFailure: 'Arrival @ {arrivalTime} is later than {deadline}',
     arriveBySuccess: 'Arrival @ {arrivalTime} meets criteria: by {deadline}',
-    loadCapacityFailure: 'Load capacity ({load}) exceeds limit by: {capacity}',
-    loadCapacitySuccess: 'Loaded ({capacity}) to Truck ({load}).',
-    unloadCapacityFailure: 'Truck has no remaining payload!',
-    unloadCapacitySuccess: 'Unloaded ({capacity}) from Truck ({load}).',
+    loadCapacityFailure: 'Stock ({load}) exceeds limit by: {capacity}',
+    loadCapacitySuccess: 'Added ({capacity}) goods to Salesman ({load}).',
+    unloadCapacityFailure: 'Salesman has nothing to sell!',
+    unloadCapacitySuccess: 'Sold ({capacity}) goods from Salesman ({load}).'
 }
 
 export type TNodeResultKey = 'arriveByFailure' | 'arriveAfterFailure' | 'arriveBetweenFailure'
