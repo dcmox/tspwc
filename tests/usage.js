@@ -1,0 +1,15 @@
+"use strict";
+exports.__esModule = true;
+var tspwc_1 = require("../tspwc");
+var test_data_1 = require("./test-data");
+var initialTime = test_data_1.stops[0].startTime || new Date();
+var description = 'Getting paths for 8 stops from ' + test_data_1.stops[0].id + ' to ' + test_data_1.stops[test_data_1.stops.length - 1].id;
+console.time(description);
+var solutions = tspwc_1.solve(test_data_1.stops, initialTime, 100);
+console.timeEnd(description);
+console.log('Number of solutions found', solutions.length);
+console.log('Solution length', solutions[0].path.length);
+console.log('Shortest valid trip', solutions[0].cost);
+console.log('Longest valid trip', solutions[solutions.length - 1].cost);
+console.log('Path', solutions[0].path);
+console.log(JSON.stringify(solutions, null, 2));

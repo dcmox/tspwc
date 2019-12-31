@@ -1,0 +1,46 @@
+{
+  "name": "tspwc",
+  "version": "1.0.2",
+  "private": false,
+  "description": "TSP-WC Algorithm - Solving the traveling salesman problem with conditions",
+  "main": "tspwc.js",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "devDependencies": {
+    "typescript": "3.7.2",
+    "@types/jest": "^24.0.24",
+    "@types/sinon": "^7.5.1",
+    "chai": "^4.2.0",
+    "jest": "^24.9.0",
+    "sinon": "^7.5.0",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1"
+  },
+  "scripts": {
+    "test": "jest tests/*",
+    "build": "npm run build:main && npm run build:demo",
+    "build:main": "tsc tspwc.ts",
+    "build:demo": "tsc tests/usage.ts",
+    "watch": "tsc -w tests/usage.ts",
+    "test-usage": "node tests/usage.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcmox/tspwc.git"
+  },
+  "keywords": [
+    "traveling salesman",
+    "tsp",
+    "branch and bound",
+    "time window",
+    "conditions",
+    "tspwc"
+  ],
+  "author": "Daniel Moxon (dancmox@comcast.net)",
+  "license": "GNU GPLv3",
+  "bugs": {
+    "url": "https://github.com/dcmox/tspwc/issues"
+  },
+  "homepage": "https://github.com/dcmox/tspwc#readme"
+}

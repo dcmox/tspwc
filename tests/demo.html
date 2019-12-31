@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            TSP-WC - Demo
+        </title>
+        <style>
+            body{ 
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+            }
+            #map {
+                height: 400px;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>TSP-WC - Demo</h3>
+        <div id="map"></div>
+        <div id="options">
+            <label for="conditionalRoute"><input type="radio" name="routeOptions[]" id="conditionalRoute" checked> Conditional Route</label>
+            <label for="optimalRoute"><input type="radio" name="routeOptions[]" id="optimalRoute"> Optimal Route</label>
+        </div>
+        <pre id="results"></pre>
+        <script src="../tspwc-browser.js"></script>
+        <script src="./demo.js"></script>
+        <!-- 
+            Replace YOUR_API_KEY_HERE with your Google API key.
+            Google Maps API and Directions API are required for this demo.
+            See: https://developers.google.com/maps/documentation/javascript/directions
+
+            Github Project: https://github.com/dcmox/tspwc
+            Author: Daniel Moxon via https://www.linkedin.com/in/daniel-moxon/
+        -->
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=initMap"
+        type="text/javascript"></script>
+    </body>
+</html>
