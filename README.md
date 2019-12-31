@@ -1,7 +1,7 @@
 # Traveling Salesman Problem - With Conditions
 Whether you need to find the optimal route regardless of conditions or you have conditions based on time windows and load capacity, tsp-wc will help you find the shortest route.
 
-![Demo app to find optimal route](https://i.imgur.com/MERDjKu.jpg)
+![Demo app to find optimal route](https://imgur.com/JmhGUur)
 
 ## Sample Usage
 See the [sample file in TypeScript](tests/usage.ts) to see how it can be used in your Node.js projects. The core function (solve) is in [tspwc.ts](tspwc.ts) and takes the following parameters:
