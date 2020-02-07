@@ -165,7 +165,7 @@ exports.solve = function (stops, startTime, load, ignore, path, cost) {
                 var paths = exports.solve(stops, startTime !== undefined ?
                     helpers_1.addHours(startTime, stops[i].times[path[path.length - 1]]) : undefined, load !== undefined ?
                     load + (stops[i].load || 0) : undefined, ignore, nPath, (cost || 0) + stops[i].times[path[path.length - 1]]);
-                res = res.concat((paths.filter(function (p) { return p.length === stops.length; })));
+                res.push.apply(res, (paths.filter(function (p) { return p.length === stops.length; })));
             }
         }
     }
@@ -210,7 +210,6 @@ exports.prune = function (stops, paths, startTime, load) {
     return result.sort(function (a, b) { return a.cost < b.cost ? -1 : 1; });
 };
 exports.sortStopsByCriteria = function (stops) {
-    var _a;
     var indexMap = {};
     for (var i = 0; i < stops.length; i++) {
         indexMap[stops[i].id] = i;
@@ -235,5 +234,8 @@ exports.sortStopsByCriteria = function (stops) {
         }
     });
     ss.forEach(function (stop, index) { return stop.times = times[index]; });
-    return (_a = [].concat(origin)).concat.apply(_a, ss).concat(destination);
+    var result = [origin];
+    result.push.apply(result, ss);
+    result.push(destination);
+    return result;
 };

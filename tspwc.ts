@@ -153,7 +153,7 @@ export const solve = (stops: ITspStop[], startTime?: Date, load?: number, ignore
                                     ignore,
                                     nPath,
                                     (cost || 0) + stops[i].times[path[path.length - 1]])
-                res = res.concat(((paths as any).filter((p: number[]) => p.length === stops.length)))
+                res.push(...((paths as any).filter((p: number[]) => p.length === stops.length)))
             }
         }
     }
@@ -214,5 +214,8 @@ export const sortStopsByCriteria = (stops: ITspStop[]): ITspStop[] => {
         }
     })
     ss.forEach((stop: any, index: number) => stop.times = times[index])
-    return ([] as ITspStop[]).concat((origin as ITspStop)).concat(...ss).concat((destination as ITspStop))
+    const result: ITspStop[] = [(origin as ITspStop)]
+    result.push(...ss)
+    result.push((destination as ITspStop))
+    return result
 }

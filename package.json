@@ -1,6 +1,6 @@
 {
   "name": "tspwc",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": false,
   "description": "TSP-WC Algorithm - Solving the traveling salesman problem with conditions",
   "main": "tspwc.js",
